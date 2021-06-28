@@ -112,7 +112,7 @@ class DeviceSelection extends React.Component {
     return (
       <div>
         <div className={styles.main}>
-          <h3 className={styles.headline}>{i18n.t('Choose devices')}</h3>
+          <h3 className={styles.headline}>{i18n.t('Selecteer apparaat')}</h3>
           <form className={formClasses}>{items}</form>
         </div>
         <div className={styles.buttonWrap}>
@@ -120,7 +120,7 @@ class DeviceSelection extends React.Component {
             className={styles.button}
             onClick={this.handleSubmit}
             disabled={disabled}>
-            {i18n.t('Done')}
+            {i18n.t('Klaar')}
           </button>
         </div>
       </div>

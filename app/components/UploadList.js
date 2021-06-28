@@ -53,8 +53,8 @@ export default class UploadList extends Component {
   static defaultProps = {
     text: {
       SHOW_ERROR : i18n.t('Error details'),
-      HIDE_ERROR : i18n.t('Hide details'),
-      UPLOAD_FAILED : i18n.t('Upload Failed: ')
+      HIDE_ERROR : i18n.t('Verberg details'),
+      UPLOAD_FAILED : i18n.t('Upload Mislukt: ')
     }
   };
 
@@ -77,7 +77,7 @@ export default class UploadList extends Component {
 
     const { disabled, onReset, onUpload, targetId } = this.props;
 
-    const headlineText = this.props.isClinicAccount ? i18n.t('Devices') : i18n.t('Upload Devices');
+    const headlineText = this.props.isClinicAccount ? i18n.t('Apparaten') : i18n.t('Upload Apparaat');
     const medtronicEnabled = _.findIndex(this.props.uploads, {key:'medtronic'}) === -1 ? false : true;
     const items = _.map(this.props.uploads, (upload) => {
       if (upload.name) {
@@ -165,7 +165,7 @@ export default class UploadList extends Component {
       return (
         <div className={classes}
           onClick={this.props.isUploadInProgress ? this.noopHandler : this.props.onChooseDevices}>
-            {i18n.t('Change Devices')}
+            {i18n.t('Verrander Apparaten')}
         </div>
       );
     } else {
