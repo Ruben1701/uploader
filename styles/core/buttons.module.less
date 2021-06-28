@@ -78,6 +78,25 @@ a.btnPrimary {
   }
 }
 
+//Atris button style
+.btnAtris,
+a.btnAtris {
+  background-color: @atris-blauw;
+  color: #fff;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: @atris-rood;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: fade(@atris-rood, 20%);
+  }
+}
+
 .btnSecondary,
 a.btnSecondary {
   color: @text-color;

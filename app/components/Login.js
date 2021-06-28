@@ -27,13 +27,14 @@ import { remote } from 'electron';
 const i18n = remote.getGlobal( 'i18n' );
 
 export class Login extends Component {
-  renderForgotPasswordLink() {
-    return (
-      <a className={styles.forgotLink} href={this.props.forgotPasswordUrl} target="_blank">
-        {i18n.t('Forgot password?')}
-      </a>
-    );
-  }
+  //TODO Wachtwoord ophaal logica voor nu verwijderd
+  // renderForgotPasswordLink() {
+  //   return (
+  //     <a className={styles.forgotLink} href={this.props.forgotPasswordUrl} target="_blank">
+  //       {i18n.t('Forgot password?')}
+  //     </a>
+  //   );
+  // }
 
   renderButton() {
     var text = i18n.t('Log in');
@@ -80,7 +81,7 @@ export class Login extends Component {
             <input className={styles.input} ref={(input) => { this.username = input; }} placeholder={i18n.t('Email')}/>
           </div>
           <div className={styles.inputWrap}>
-            <input className={styles.input} ref={(input) => { this.password = input; }} placeholder={i18n.t('Password')} type="password"/>
+            <input className={styles.input} ref={(input) => { this.password = input; }} placeholder={i18n.t('Wachtwoord')} type="password"/>
           </div>
           <div className={styles.actions}>
             <div>
@@ -88,7 +89,7 @@ export class Login extends Component {
                 <input type="checkbox" ref={(input) => { this.remember = input; }} id="remember"/>
                 <label htmlFor="remember">{i18n.t('Remember me')}</label>
               </div>
-              <div className={styles.forgot}>{this.renderForgotPasswordLink()}</div>
+              {/* <div className={styles.forgot}>{this.renderForgotPasswordLink()}</div> */}
             </div>
             <div>
               {this.renderButton()}
@@ -104,7 +105,7 @@ export class Login extends Component {
 Login.propTypes = {
   disabled: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string,
-  forgotPasswordUrl: PropTypes.string.isRequired,
+  // forgotPasswordUrl: PropTypes.string.isRequired,
   isFetching: PropTypes.bool.isRequired,
   onLogin: PropTypes.func.isRequired
 };
@@ -114,7 +115,7 @@ export default connect(
     return {
       disabled: Boolean(state.unsupported),
       errorMessage: state.loginErrorMessage,
-      forgotPasswordUrl: state.blipUrls.forgotPassword,
+      // forgotPasswordUrl: state.blipUrls.forgotPassword,
       isFetching: state.working.fetchingUserInfo,
     };
   },

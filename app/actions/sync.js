@@ -591,6 +591,8 @@ export function versionCheckFailure(err, currentVersion, requiredVersion) {
  * relating to updateProfile
  */
 
+// Kan waarschijnlijk verwijderd worden
+
 export function updateProfileRequest() {
   return {
     type: actionTypes.UPDATE_PROFILE_REQUEST,
