@@ -85,7 +85,8 @@
     "sundial": "1.6.0",
     "tidepool-platform-client": "0.44.0",
     "usb-cdc-acm": "0.1.1",
-    "uuid": "7.0.3"
+    "uuid": "7.0.3",
+    "yarn": "^1.22.10"
   },
   "browserslist": "last 2 electron major versions",
   "bin": {
