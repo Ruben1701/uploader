@@ -30,7 +30,7 @@ class ProgressBar extends React.Component {
     // Minimum fill of 1%
     var width = this.props.percentage ? this.props.percentage : 1;
     return (
-      <div className={styles.progressBar} title={'Progress: ' + this.props.percentage + '%'}>
+      <div className={styles.progressBar} title={'Vooruitgang: ' + this.props.percentage + '%'}>
         <div className={styles.fill} style={{width: width + '%'}}>&nbsp;</div>
       </div>
     );

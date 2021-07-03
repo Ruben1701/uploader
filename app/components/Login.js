@@ -27,7 +27,7 @@ import { remote } from 'electron';
 const i18n = remote.getGlobal( 'i18n' );
 
 export class Login extends Component {
-  //TODO Wachtwoord ophaal logica voor nu verwijderd
+  //Wachtwoord ophaal logica voor nu verwijderd
   // renderForgotPasswordLink() {
   //   return (
   //     <a className={styles.forgotLink} href={this.props.forgotPasswordUrl} target="_blank">
@@ -87,7 +87,7 @@ export class Login extends Component {
             <div>
               <div className={styles.remember}>
                 <input type="checkbox" ref={(input) => { this.remember = input; }} id="remember"/>
-                <label htmlFor="remember">{i18n.t('Remember me')}</label>
+                <label htmlFor="remember">{i18n.t('Onthoud mij')}</label>
               </div>
               {/* <div className={styles.forgot}>{this.renderForgotPasswordLink()}</div> */}
             </div>

@@ -63,7 +63,7 @@ export default class Upload extends Component {
       CARELINK_DOWNLOADING: i18n.t('Downloading CareLink export...'),
       MEDTRONIC_SERIAL_NUMBER: i18n.t('Pump Serial number'),
       REMEMBER_SERIAL_NUMBER: i18n.t('Remember serial number'),
-      MEDTRONIC_600_IS_LINKED: i18n.t('Meter and pump are linked'),
+      MEDTRONIC_600_IS_LINKED: i18n.t('Meter en pomp zijn gelinked'),
       LABEL_UPLOAD: i18n.t('Upload'),
       LABEL_IMPORT: i18n.t('Import'),
       LABEL_OK: i18n.t('OK'),
@@ -584,7 +584,7 @@ export default class Upload extends Component {
             </label>
           </div>
           <div className={divHidden}>
-            <p>{i18n.t('Enter 10 character serial number.')}</p>
+            <p>{i18n.t('Vul 10 karakter serial nummer in.')}</p>
             <input
               type="text"
               value={this.state.medtronic600SerialNumberValue}
@@ -603,9 +603,9 @@ export default class Upload extends Component {
       return null;
     }
     const opts = [
-      { label: i18n.t('since last upload'), value: uploadDataPeriod.PERIODS.DELTA },
-      { label: i18n.t('last 4 weeks'), value: uploadDataPeriod.PERIODS.FOUR_WEEKS },
-      { label: i18n.t('all data on pump'), value: uploadDataPeriod.PERIODS.ALL }
+      { label: i18n.t('sinds laatste upload'), value: uploadDataPeriod.PERIODS.DELTA },
+      { label: i18n.t('afgelopen 4 weken'), value: uploadDataPeriod.PERIODS.FOUR_WEEKS },
+      { label: i18n.t('alle data op pomp'), value: uploadDataPeriod.PERIODS.ALL }
     ];
     return (
       <div className={styles.uploadPeriodRow}>
@@ -761,7 +761,7 @@ export default class Upload extends Component {
     if (this.isBlockModeFileChosen()) {
       return (
           <div className={styles.blockMode}>
-            <div className={styles.preparing}>{i18n.t('Preparing file')} &hellip;</div>
+            <div className={styles.preparing}>{i18n.t('Bestand voorbereiden')} &hellip;</div>
             <div className={styles.blockMode}>{this.props.upload.file.name}</div>
           </div>
       );

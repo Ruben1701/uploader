@@ -78,7 +78,7 @@ class UserDropdown extends React.Component {
     }
 
     var text = this.props.locationPath === pagesMap.MAIN ?
-      i18n.t('Upload data for') : i18n.t('Choose devices for');
+      i18n.t('Upload data voor') : i18n.t('Kies apparaten voor');
     var styleClass = this.props.locationPath.substring(1);
 
     return (

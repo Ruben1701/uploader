@@ -88,7 +88,7 @@ export default class LoggedInAs extends Component {
 
 
     if (uploadInProgress) {
-      title = i18n.t('Upload in progress!\nPlease wait to change device selection.');
+      title = i18n.t('Upload is bezig!\nWacht alstublieft met het apparaat verranderen.');
     } else if (isDisabled) {
       title = i18n.t('Set up data storage to upload devices.');
     }
@@ -101,7 +101,7 @@ export default class LoggedInAs extends Component {
           onClick={isDisabled ? this.noopHandler : this.handleChooseDevices}
           title={title}>
           <i className={styles.editIcon}></i>
-          {i18n.t('Choose Devices')}
+          {i18n.t('Kies apparaten')}
         </a>
       </li>
     );
@@ -115,7 +115,7 @@ export default class LoggedInAs extends Component {
           href=""
           title="Check for Updates">
           <i className={styles.updateIcon}></i>
-          {i18n.t('Check for Updates')}
+          {i18n.t('Check voor Updates')}
         </a>
       </li>
     );
@@ -133,9 +133,9 @@ export default class LoggedInAs extends Component {
         disabled={uploadInProgress}
         href=""
         onClick={uploadInProgress ? this.noopHandler : this.handleLogout}
-        title={uploadInProgress ? i18n.t('Upload in progress!\nPlease wait to log out.') : ''}>
+        title={uploadInProgress ? i18n.t('Upload is bezig!\nWacht alstublieft met uitloggen.') : ''}>
         <i className={styles.logoutIcon}></i>
-        {i18n.t('Logout')}
+        {i18n.t('Uitloggen')}
       </a>
     );
   }

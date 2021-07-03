@@ -105,7 +105,7 @@ class TimezoneDropdown extends React.Component {
         onChange={this.props.onTimezoneChange.bind(null, targetUser)}
         options={opts}
         simpleValue={true}
-        placeholder={i18n.t('Type to search...')}
+        placeholder={i18n.t('Typ ome te zoeken...')}
         value={this.props.targetTimezone}
         disabled={this.props.isUploadInProgress}
         ref={this.setTimezoneSelect} />
@@ -114,8 +114,8 @@ class TimezoneDropdown extends React.Component {
 
   renderSuggestedTime = () => {
     if(this.props.targetTimezone){
-      let textClinic = i18n.t('The device times should be approximately');
-      let textPatient = i18n.t('Your device times should be approximately');
+      let textClinic = i18n.t('De tijd op het apparaat moet ongeveer dit zijn');
+      let textPatient = i18n.t('De tijd op het apparaat zou ongeveer dit moeten zijn');
       let text = this.props.isClinicAccount ? textClinic : textPatient;
       let timez = this.props.targetTimezone;
       return (
@@ -126,7 +126,7 @@ class TimezoneDropdown extends React.Component {
     } else {
       return (
         <div className={styles.timeDetail}>
-          {i18n.t('Please select a time zone.')}
+          {i18n.t('Selecteer alstublieft een tijdzone.')}
         </div>
       );
     }
