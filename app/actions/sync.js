@@ -294,16 +294,18 @@ export function loginRequest() {
 
 export function loginSuccess(results) {
   const { user, profile, memberships } = results;
-  const isClinicAccount = personUtils.userHasRole(user, 'clinic');
-  if (isClinicAccount) {
-    uploadDataPeriod.setPeriodMedtronic600(uploadDataPeriod.PERIODS.FOUR_WEEKS);
-  }
+  //const isClinicAccount = personUtils.userHasRole(user, 'clinic')
+  
+  // if (isClinicAccount) {
+  //   uploadDataPeriod.setPeriodMedtronic600(uploadDataPeriod.PERIODS.FOUR_WEEKS);
+  // }
   return {
     type: actionTypes.LOGIN_SUCCESS,
     payload: { user, profile, memberships },
     meta: {
       source: actionSources[actionTypes.LOGIN_SUCCESS],
-      metric: {eventName: isClinicAccount ? metrics.CLINIC_LOGIN_SUCCESS : metrics.LOGIN_SUCCESS}
+      //metric: {eventName: isClinicAccount ? metrics.CLINIC_LOGIN_SUCCESS : metrics.LOGIN_SUCCESS}
+      metric: {eventName: metrics.LOGIN_SUCCESS}
     }
   };
 }

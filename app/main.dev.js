@@ -33,7 +33,7 @@ if(process.env.NODE_ENV === 'production') {
 
 crashReporter.start({
   productName: 'Uploader',
-  companyName: 'Tidepool',
+  companyName: 'Atris',
   submitURL: '',
   uploadToServer: false
 });
@@ -179,7 +179,7 @@ operating system, as soon as possible.`,
 
   if (process.platform === 'darwin') {
     template = [{
-      label: i18n.t('Tidepool Uploader'),
+      label: i18n.t('Atris Uploader'),
       submenu: [{
         label: i18n.t('About Tidepool Uploader'),
         selector: 'orderFrontStandardAboutPanel:'

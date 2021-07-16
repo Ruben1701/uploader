@@ -140,17 +140,20 @@ export function doLogin(creds, opts) {
       }
 
       // detect if a DSA here and redirect to data storage screen
-      const { targetUsersForUpload } = getState();
-      if (_.isEmpty(targetUsersForUpload)) {
-        return dispatch(setPage(pages.NO_UPLOAD_TARGETS));
-      }
+      // const { targetUsersForUpload } = getState();
+      // console.log(targetUsersForUpload);
+      // if (_.isEmpty(targetUsersForUpload)) {
+      //   return dispatch(setPage(pages.NO_UPLOAD_TARGETS));
+      // }
 
       const { uploadTargetUser } = getState();
+      console.log(uploadTargetUser);
       if (uploadTargetUser !== null) {
         dispatch(syncActions.setBlipViewDataUrl(
           api.makeBlipUrl(actionUtils.viewDataPathForUser(uploadTargetUser))
         ));
-      }
+      } 
+      
       dispatch(retrieveTargetsFromStorage());
     });
   };
@@ -295,6 +298,7 @@ export function doDeviceUpload(driverId, opts = {}, utc) {
       } else if (_.get(targetDevice, 'source.driverId', null) === 'BluetoothLE') {
         errorMessage = 'E_BLUETOOTH_PAIR';
       }
+      console.log(device);
       device.upload(driverId, opts, actionUtils.makeUploadCb(dispatch, getState, errorMessage , utc));
     });
   };

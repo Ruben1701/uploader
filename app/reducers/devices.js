@@ -20,7 +20,6 @@ const devices = {
   //   isFetching: false,
   //   key: 'carelink',
   //   name: 'Medtronic',
-  //   // for the device selection list
   //   selectName: 'Medtronic (CareLink import)',
   //   source: {type: 'carelink'},
   //   enabled: {mac: true, win: true, linux: true}
@@ -46,20 +45,20 @@ const devices = {
   //   source: {type: 'device', driverId: 'ReliOnPremier'},
   //   enabled: {mac: true, win: true, linux: true}
   // },
-  // medtronic: {
-  //   instructions: i18n.t('Connect your Contour Next Link to your computer'),
-  //   image: {
-  //     'src': mm723Image,
-  //     'height': 128,
-  //     'width': 200,
-  //     'alt': 'Contour Next Link'
-  //   },
-  //   key: 'medtronic',
-  //   name: 'Medtronic 523, 723, Veo or 530G',
-  //   selectName: 'Medtronic 523, 723, Veo or 530G (using Contour Next Link)',
-  //   source: {type: 'device', driverId: 'Medtronic'},
-  //   enabled: {mac: true, win: true, linux: true}
-  // },
+  medtronic: {
+    instructions: i18n.t('Connect your Contour Next Link to your computer'),
+    image: {
+      'src': mm723Image,
+      'height': 128,
+      'width': 200,
+      'alt': 'Contour Next Link'
+    },
+    key: 'medtronic',
+    name: 'Medtronic 523, 723, Veo or 530G',
+    selectName: 'Medtronic 523, 723, Veo or 530G (using Contour Next Link)',
+    source: {type: 'device', driverId: 'Medtronic'},
+    enabled: {mac: true, win: true, linux: true}
+  },
   medtronic600: {
     instructions: i18n.t('Verbind de Contour Next Link 2.4 met de computer'),
     image: {

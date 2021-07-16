@@ -73,6 +73,8 @@ export function memberships(state = {}, action) {
 export function loggedInUser(state = null, action) {
   switch (action.type) {
     case actionTypes.LOGIN_SUCCESS:
+      console.log(action.payload)
+      return null;
     case actionTypes.SET_USER_INFO_FROM_TOKEN:
       const { user } = action.payload;
       return user.userid;

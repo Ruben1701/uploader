@@ -95,6 +95,7 @@ class DeviceSelection extends React.Component {
       );
     });
 
+    //disables the carelink option since it is currently not supported
     var carelink = _.remove(items, {'key': 'carelink'});
 
     // TODO: when this gets the ES6 treatment, use computed property syntax

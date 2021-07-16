@@ -105,7 +105,7 @@ class TimezoneDropdown extends React.Component {
         onChange={this.props.onTimezoneChange.bind(null, targetUser)}
         options={opts}
         simpleValue={true}
-        placeholder={i18n.t('Typ ome te zoeken...')}
+        placeholder={i18n.t('Typ om te zoeken...')}
         value={this.props.targetTimezone}
         disabled={this.props.isUploadInProgress}
         ref={this.setTimezoneSelect} />
